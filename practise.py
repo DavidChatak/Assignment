@@ -1,9 +1,11 @@
-while True:
-    try:
-        num = input("enter a non negative number[q: Quit]:")
-        liste = [int(num[i])**len(num) for i in range(len(num))]
-        print(f"{num} is a Armstrong number..." if int(num)==sum(liste) else "it is NOT Armstrong number")
-    except ValueError:
-        if num in "qQ":
+def apocalyptic(n):
+    num="111666" #str(2**n)
+    for i in range(len(num)-3):
+        if num[i:i+3] == "666":
+            res = f"Repent! {i+1} days until the Apocalypse!"
             break
-        print("\nplz enter a non negative integer number and try again..\n pres (q/Q) for quit")
+        else:
+            res = "Crisis averted. Resume sinning."
+    return res
+
+print(apocalyptic(157))
