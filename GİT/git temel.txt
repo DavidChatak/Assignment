@@ -3,3 +3,7 @@ git add .
 git commit -m "first commit"
 git remote add origin https://github.com/DavidChatak/Assignment.git
 git push -u origin master
+
+git pull
+
+git fetch
