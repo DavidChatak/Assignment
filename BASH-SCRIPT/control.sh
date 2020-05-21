@@ -1,14 +1,17 @@
 #!/bin/bash
-var="False"
-if [ $1 -eq $2 ]; then
-	echo $?
-	let $var="True"
-	echo "equal"
-	echo $var
+read res
+if [ $res = "y" -o $res = "Y"  ] ;
+then
+	echo "YES" 
 else 
-	echo $?
-	echo "not-equal"
-	let $var="False"
-	echo $var
+	echo "NO"
+
 fi
+
+ read I
+ if [ "$I" = "y" -o "$I" = "Y" ]; then
+     echo "YES"
+ else
+     echo "NO"
+ fi
 

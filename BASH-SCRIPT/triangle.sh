@@ -1,18 +1,17 @@
 #!/bin/bash
-q=False
-if [[ $(($1+$2)) -gt  $3 && $(($2+$3)) -gt $1  && $(($1+$3)) -gt $2 ]]; then
-	#statetment desired output True
-	echo "OK "
-	else
-	echo "NOK"
-fi
-
-if [ $1 -eq $2  -a $2 -eq $3 ]
+X=$1
+Y=$2
+Z=$3
+if [ $(($X+$Y)) -gt  $Z -a  $(($Y+$Z)) -gt $X  -a $(($X+$Z)) -gt $Y ]; then
+	if [ $X -eq $Y  -a $Y -eq $Z ]
 	then
 	echo "EQUILATERAL"
-elif [ $1 -eq $2 -o $1 -eq $3 -o $3 -eq $2 ]
+	elif [ $X -eq $Y -o $X -eq $Z -o $Z -eq $Y ]
 	then
-	echo "Isosceles"
+	echo "Isosceles" 
 	else
 	echo "Scalene"
+	fi
+else
+	echo "can not be triangle"
 fi
